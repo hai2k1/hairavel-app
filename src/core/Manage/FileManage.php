@@ -100,7 +100,7 @@ trait FileManage
             $data = $data->map(function ($item) use ($format) {
                 $item->size = app_filesize($item['size']);
                 $item->time = $item->created_at ? $item->created_at->format('Y-m-d H:i:s') : '';
-                if (in_array($item->ext, explode(',', $format['image'])))) {
+                if (in_array($item->ext, explode(',', $format['image']))) {
                     $item->cover = $item->url;
                 } else {
                     $type = 'other';

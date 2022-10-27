@@ -41,7 +41,7 @@ class Uninstall extends Command
             $dir = base_path('modules/' . $appDir);
             $database = $dir . '/Database';
             $migrations = $database . '/Migrations';
-            $publish = 'duxapp-' . strtolower($name);
+            $publish = 'haiapp-' . strtolower($name);
         } else {
             // package application
             $dir = base_path('vendor/' . trim($name, '/'));
