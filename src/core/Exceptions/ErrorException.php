@@ -25,7 +25,7 @@ class ErrorException extends Exception
             'msg' => $this->message,
             'url' => $this->url
         ];
-        return response()->view('vendor.duxphp.duxravel-app.src.core.Views.error', $result, $this->code);
+        return response()->view('vendor.haibase.hairavel-app.src.core.Views.error', $result, $this->code);
     }
 
 }

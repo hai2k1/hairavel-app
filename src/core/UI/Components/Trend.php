@@ -26,6 +26,6 @@ class Trend extends Component
      */
     public function render()
     {
-        return view('vendor.duxphp.duxravel-app.src.core.UI.View.Components.trend');
+        return view('vendor.haibase.hairavel-app.src.core.UI.View.Components.trend');
     }
 }

@@ -25,7 +25,7 @@ class Build
             return $this->data;
         }
 
-        if (!is_file($buildPath = app()->bootstrapPath('cache/duxravel.php'))) {
+        if (!is_file($buildPath = app()->bootstrapPath('cache/hairavel.php'))) {
         $this->build();
     }
         $this->data = require_once $buildPath;
@@ -50,7 +50,7 @@ class Build
      */
     public function build(): void
     {
-        $buildPath = app()->bootstrapPath('cache/duxravel.php');
+        $buildPath = app()->bootstrapPath('cache/hairavel.php');
 
         if (!is_writable($dirname = dirname($buildPath))) {
             throw new \Exception("The {$dirname} directory must be present and writable.");
@@ -68,7 +68,7 @@ class Build
         }
 
         $list = collect($packages)->mapWithKeys(function ($package) {
-            return [$this->format($package['name']) => $package['extra']['duxravel'] ?? []];
+            return [$this->format($package['name']) => $package['extra']['hairavel'] ?? []];
         })->filter()->all();
 
         $service = [];

@@ -44,7 +44,7 @@ trait Visitor
             ->render(true);
 
 
-        return (new View('vendor.duxphp.duxravel-app.src.core.Views.Manage.VisitorViews.info', [
+        return (new View('vendor.haibase.hairavel-app.src.core.Views.Manage.VisitorViews.info', [
             'appChart' => $appChart
         ]))->render('dialog');
 

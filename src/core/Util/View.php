@@ -56,7 +56,7 @@ class View
             $sideImages[] = str_replace(public_path(), '', $file);
         }
 
-        return response()->view('vendor.duxphp.duxravel-app.src.core.Views.manage', [
+        return response()->view('vendor.haibase.hairavel-app.src.core.Views.manage', [
             'mainJs' => $mainJs,
             'mainCss' => $mainCss,
             'sideImages' => $sideImages,

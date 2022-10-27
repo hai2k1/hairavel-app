@@ -87,6 +87,6 @@ class Installer extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        return 'duxravel-app' === $packageType;
+        return 'hairavel-app' === $packageType;
     }
 }

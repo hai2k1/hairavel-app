@@ -26,6 +26,6 @@
   </script>
 </head>
 <body>
-<div class="bg-gray-100 dark:bg-blackgray-1" id="duxravel-static"></div>
+<div class="bg-gray-100 dark:bg-blackgray-1" id="hairavel-static"></div>
 </body>
 </html>

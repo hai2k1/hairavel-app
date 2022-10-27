@@ -25,7 +25,7 @@ class Scripts
     public static function clearCompiled()
     {
         $laravel = new Application(getcwd());
-        if (is_file($servicesPath = $laravel->bootstrapPath('cache/duxravel.php'))) {
+        if (is_file($servicesPath = $laravel->bootstrapPath('cache/hairavel.php'))) {
             @unlink($servicesPath);
         }
 

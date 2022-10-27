@@ -15,7 +15,7 @@ if (!function_exists("app_success")) {
         if (request()->expectsJson()) {
             return Response::success($data, $msg, $code, ['x-Location' => $url ?: ''], JSON_NUMERIC_CHECK);
         } else {
-            return response()->view('vendor.duxphp.duxravel-app.src.core.Views.success', [
+            return response()->view('vendor.haibase.hairavel-app.src.core.Views.success', [
                 'msg' => $msg,
                 'url' => $url
             ], 200);
