@@ -1,0 +1,92 @@
+{
+  "name": "haibase/hairavel-app",
+  "description": "Hairavel Core App",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "HaiPHP",
+      "email": "trihai306201@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "ext-bcmath": "*",
+    "ext-fileinfo": "*",
+    "ext-json": "*",
+    "ext-sockets": "*",
+    "composer-plugin-api": "^2.0",
+    "fruitcake/laravel-cors": "^3.0",
+    "godruoyi/php-snowflake": "^2.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "intervention/image": "^2.5",
+    "jenssegers/agent": "^2.6",
+    "jiannei/laravel-enum": "^3.0",
+    "jiannei/laravel-response": "^4.0",
+    "kalnoy/nestedset": "^6.0",
+    "laravel/framework": "^9.0",
+    "laravel/tinker": "^2.5",
+    "mews/captcha": "^3.2",
+    "nunomaduro/collision": "^6.1",
+    "orangehill/iseed": "^3.0",
+    "overtrue/laravel-filesystem-cos": "^3.1",
+    "overtrue/laravel-filesystem-qiniu": "^2.1",
+    "phpoffice/phpspreadsheet": "^1.15",
+    "spatie/laravel-ignition": "^1.0",
+    "tymon/jwt-auth": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hairavel\\Composer\\": "src/composer",
+      "Hairavel\\Core\\": "src/core",
+      "Hairavel\\Database\\Seeders\\": "database/seeders"
+    },
+    "files": [
+      "src/core/Util/Function.php"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+    },
+    "laravel": {
+      "providers": [
+        "Hairavel\\Core\\Providers\\AppServiceProvider"
+      ],
+      "aliases": {
+        "Menu": "Hairavel\\Core\\Facades\\Menu"
+      }
+    },
+    "hairavel": {
+      "service": [
+        "Hairavel\\Core\\Service\\Service"
+      ],
+      "route": [
+        "src/core/Route/Web.php",
+        "src/core/Route/Service.php",
+        "src/core/Route/Api.php"
+      ],
+      "event": [
+        "Hairavel\\Core\\Events\\ServiceRegister",
+        "Hairavel\\Core\\Events\\ServiceBoot",
+        "Hairavel\\Core\\Events\\ManageTable",
+        "Hairavel\\Core\\Events\\ManageForm",
+        "Hairavel\\Core\\Events\\ManageExport",
+        "Hairavel\\Core\\Events\\ManageForm",
+        "Hairavel\\Core\\Events\\ManageDel",
+        "Hairavel\\Core\\Events\\ManageClear",
+        "Hairavel\\Core\\Events\\ManageRecovery",
+        "Hairavel\\Core\\Events\\ManageStatus"
+      ],
+      "listener": [
+        "Hairavel\\Core\\Listeners\\InstallSeed"
+      ]
+    },
+    "class": "Hairavel\\Composer\\Plugin"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "preferred-install": "dist"
+  }
+}
