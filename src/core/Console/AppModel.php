@@ -61,8 +61,7 @@ class AppModel extends \Hairavel\Core\Console\Common\Stub
         //create model
         Schema::create($table, function (Blueprint $table) use ($key, $del) {
             $table->increments($key);
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamps();
             if ($del) {
                 $table->timestamp('deleted_at');
             }
