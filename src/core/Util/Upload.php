@@ -59,9 +59,9 @@ class Upload
                         switch ($thumb) {
                             // center crop zoom
                             case 'center':
-//                                $image->fit($width, $height, function ($constraint) {
-//                                    $constraint->upsize();
-//                                }, 'center');
+                                $image->fit($width, $height, function ($constraint) {
+                                    $constraint->upsize();
+                                }, 'center');
                                 break;
                             // fixed size
                             case 'fixed':
@@ -72,15 +72,15 @@ class Upload
                             // equal scaling
                             case 'scale':
                                 if ($width > $height) {
-//                                    $image->resize(null, $height, function ($constraint) {
-//                                        $constraint->aspectRatio();
-//                                        $constraint->upsize();
-//                                    });
+                                    $image->resize(null, $height, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                        $constraint->upsize();
+                                    });
                                 } else {
-//                                    $image->resize($width, null, function ($constraint) {
-//                                        $constraint->aspectRatio();
-//                                        $constraint->upsize();
-//                                    });
+                                    $image->resize($width, null, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                        $constraint->upsize();
+                                    });
                                 }
                         }
                     }
