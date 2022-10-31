@@ -52,7 +52,7 @@ class Upload
                 $file = $item['file'];
                 $field = $item['field'];
                 $ext = $file->extension();
-                if (in_array($ext, ['jpg', 'png', 'bmp', 'jpeg', 'gif']))) {
+                if (in_array($ext, ['jpg', 'png', 'bmp', 'jpeg', 'gif'])) {
                     $tmpPath = $file->getRealPath();
                     $image = Image::make($file);
                     if ($thumb) {

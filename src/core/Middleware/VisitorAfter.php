@@ -68,7 +68,7 @@ class VisitorAfter
             'method' => $request->method(),
             'route' => $request->getPathInfo(),
             'name' => $request->route()->getAction('as'),
-            'desc' => $request->route()->getAction('desc') ?: '未知',
+            'desc' => $request->route()->getAction('desc') ?: 'unknown',
             'params' => $params,
             'ip' => $request->ip(),
             'ua' => $request->userAgent(),
@@ -98,7 +98,7 @@ class VisitorAfter
         $data = [
             'method' => $request->method(),
             'name' => $request->route()->getAction('as'),
-            'desc' => $request->route()->getAction('desc') ?: '未知',
+            'desc' => $request->route()->getAction('desc') ?: 'unknown',
             'date' => date('Ymd'),
         ];
         if (!$data['name']) {
