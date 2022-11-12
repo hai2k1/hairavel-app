@@ -57,6 +57,7 @@ class App extends \Hairavel\Core\Console\Common\Stub
             'auth' => $auth,
             'desc' => $desc,
         ]);
+
         $this->generatorFile($appDir . '/' . 'Menu/Admin.php', __DIR__ . '/Tpl/App/Menu.stub', [
             'appDir' => $appDir,
             'name' => $name,

@@ -2,6 +2,7 @@
 
 namespace Hairavel\Core\Http;
 
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Routing\Router;
 
@@ -66,6 +67,8 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
      * @var array
      */
     protected $routeMiddleware = [
+        'auth'=>Authenticate::class,
+        'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,

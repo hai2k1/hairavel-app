@@ -18,7 +18,7 @@ class Visitor extends Command
      *
      * @var string
      */
-    protected $description = '访客定时清理';
+    protected $description = 'Regular cleaning of visitors';
 
     /**
      * Create a new command instance.
